@@ -7,10 +7,9 @@ html(lang="en")
     title SuperBlog!
   body
     h1 Welcome to SuperBlog!
-    // Конструкция "each" позволяет перебрать массив и для каждого элемента сгенерировать разметку
     ul
-      each article in articles
-        // #{...} — интерполяция. Так шаблонизатор понимает, что сюда надо встроить данные.
-      //- li #{article.title}  <a href="...">Читать</a>
-      li #{article.title} 
+     each article in articles
+
+      li #{article.title}
+      
         a(href=article.id) Читать
