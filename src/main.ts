@@ -12,6 +12,14 @@ async function bootstrap() {
 
   app.setViewEngine('pug');
 
+  app.use((req, res, next) => {
+    if (req.originalUrl === '/favicon.ico') {
+      res.status(204).end(); // Возвращаем пустой ответ
+      return;
+    }
+    next();
+  });
+
   await app.listen(3000);
 }
 

@@ -6,11 +6,11 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title SuperBlog!
     link(rel="stylesheet", href="./main.css")
-    body
+  body
     h1 Welcome to SuperBlog!
     ul
-     each article in articles
-
-      li #{article.title}
-      
-        a(href=article.id) Read
+      each article in articles
+        li #{article.title}  
+          a(href=article.id) Read
+    a(href='/create' class='createBtn') Create
+    
