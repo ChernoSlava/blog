@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    title New Article
+    link(rel="stylesheet", href="./create.css")
+  style
+  body
+    h1 New Article
+    form(method="POST" action="/articles")
+
+      label(for="title" class="input-title") Title:
+      input(type="text" name="title" id="title" maxlength="100")
+
+      label(for="content" class="input-content") Article:
+      textarea(name="content" id="content" class="input-field" minlength="10" maxlength="500")
+
+      button(type="submit") Create
